@@ -65,8 +65,8 @@
             img.setAttribute("src", "");
             index.setAttribute("aria-busy", "true");
             const i = srand();
-            img.setAttribute("src", "a60/" + i + ".jpg");
-            index.innerText = "# " + i;
+            img.setAttribute("src", `a60/${i}.jpg`);
+            index.innerText = `# ${i}`;
         };
     </script>
 </head>
@@ -100,7 +100,7 @@
             <script>
                 changePic();
                 const img = document.getElementById("a60_img")
-                img.onload = function () {
+                img.onload = () => {
                     document.getElementById("index_show").setAttribute("aria-busy", "false");
                 }
             </script>
